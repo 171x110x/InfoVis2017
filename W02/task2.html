@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>W02: Task 2</title>
+</head>
+<body>
+	<script src = 'vec3.js'></script> 
+	<script src = 'AreaOfTriangle.js'></script> 
+	<script>
+		// ex1
+		var x0 = 1, y0 = 2, z0 = -1;
+		var x1 = 9, y1 = 3, z1 = 1;
+		var x2 = 5, y2 = 10, z2 = 2;
+		var v0 = new Vec3(x0, y0, z0);
+		var v1 = new Vec3(x1, y1, z1);
+		var v2 = new Vec3(x2, y2, z2);
+		var S = AreaOfTriangle(v0, v1, v2);
+		document.write('Example1<br>');
+		document.write('(x0, y0, z0) = (' + x0 + ', ' + y0 + ', ' + z0 + ')<br>' );
+		document.write('(x1, y1, z1) = (' + x1 + ', ' + y1 + ', ' + z1 + ')<br>' );
+		document.write('(x2, y2, z2) = (' + x2 + ', ' + y2 + ', ' + z2 + ')<br>' );
+		document.write('Area = ' + S + '<br><br>');
+
+		// ex2
+		var x0 = 0, y0 = 0, z0 = 1;
+		var x1 = 0, y1 = 1, z1 = 0;
+		var x2 = 0, y2 = 0, z2 = 0;
+		var v0 = new Vec3(x0, y0, z0);
+		var v1 = new Vec3(x1, y1, z1);
+		var v2 = new Vec3(x2, y2, z2);
+		var S = AreaOfTriangle(v0, v1, v2);
+		document.write('Example2<br>');
+		document.write('(x0, y0, z0) = (' + x0 + ', ' + y0 + ', ' + z0 + ')<br>' );
+		document.write('(x1, y1, z1) = (' + x1 + ', ' + y1 + ', ' + z1 + ')<br>' );
+		document.write('(x2, y2, z2) = (' + x2 + ', ' + y2 + ', ' + z2 + ')<br>' );
+		document.write('Area = ' + S);
+	</script>
+</body>
+</html>
+
