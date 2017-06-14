@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<head>
+	<title>Final Task</title>
+	<script src="js/three.min.js"></script>
+	<script src="js/Lut.js"></script>
+	<script src="js/TrackballControls.js"></script>
+	<script src="js/KVS.min.js"></script>
+	<script src="js/KVS2THREE.min.js"></script>
+	<script src="js/KVSLobsterData.js"></script>
+	<script src="js/Bounds.js"></script>
+	<script src="js/Isosurfaces.js"></script>
+	<script src="js/cpick.js"></script>
+    <script src="js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div class='navigation'>
+		<!--change color-->
+		<div class='colorbar' id='colorbar'>
+			<p class='centerdocument'>Click button to change color.<br>ロブスターの色を変更できます．</p>
+			<form name="form1" id="id_form1" action="">
+				<input type="text" name="c2" value="#d4eefe" size="13" class="html5jp-cpick [coloring:true]" id="id_textBox1"/>
+				<input type="button" id='colorbuttun' value="Apply color">
+			</form>
+		</div>
+
+		<!--change threshold-->
+		<div class='isosurface'>
+			<p class='isovaluebar'><label for="range01">Slide bar to change isovalue.
+			<br>スライダーにより等値面の閾値を変更できます．</label><br><br>
+				<input id="range01" type="range" min="0" max="255" step="1" value="128" list="scale">
+				<span id="showValueArea">128</span>
+			</p>
+			<script>
+				var object = document.getElementById("range01");
+				function showValue() {
+					document.getElementById("showValueArea").textContent = object.value;
+				}
+				object.addEventListener("change", showValue, false);
+			</script>
+			<datalist id="scale">
+				<option>0</option>
+				<option>128</option>
+				<option>255</option>
+			</datalist>
+		</div>
+
+		<!--change material-->
+		<div class='material' id='material'>
+			<p class='centerdocument'>Click button to change material.<br>ボタンから反射モデルを選択できます．<br>光源を切って比較を推奨．</p>
+			<form name="form2" id='form2' class='form2'>
+				<input type="radio" name="material" value="1" id='material1' checked="checked">Lambert
+				<input type="radio" name="material" value="2" id='material2'>Phong</br>
+			</form>
+		</div>
+
+		<!--change light-->
+		<div class='light' id='light'>
+			<p class='centerdocument'>Click button to change light.<br>光源の有無を設定できます．</p>
+			<form name="form3" id='form3' class='form3'>
+				<input type="radio" name="light" value="1" id='light1' checked="checked">On
+				<input type="radio" name="light" value="2" id='light2'>Off</br>
+			</form>
+		</div>
+
+		<!--change color-->
+		<div class='lightcolorbar' id='lightcolorbar'>
+			<p class='centerdocument'>Click button to change light color.<br>光源の色を変更できます．<br>（色を変えても特に見栄えは変わりません）</p>
+			<form name="form4" id="id_form2" action="">
+				<input type="text" name="c3" value="#f6c8d3" size="13" class="html5jp-cpick [coloring:true]" id="id_textBox2"/>
+				<input type="button" id='lightcolorbuttun' value="Apply color">
+			</form>
+		</div>
+
+		<div class='name'>
+			<p class='centerdocument'>学籍番号：171x110x<br>氏名：北村毅
+		</div>
+
+
+	</div>
+
+	<!--plt figure-->
+	<div class='display' id='display'></div>
+
+	<script>
+		main();
+	</script>
+</body>
+</html>

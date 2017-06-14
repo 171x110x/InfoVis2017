@@ -1,0 +1,66 @@
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	margin: 0;
+}
+
+.navigation{
+	float: right;
+	margin: 0;
+	width: 23.2%;
+	height: 100%;
+	background-color: #F4F4F4;
+	color: #666666;
+	font-size: 14px;
+}
+
+.centerdocument{
+	text-align: center;
+}
+
+.colorbar{
+	padding-top: 15px;
+	padding-left: 7px;
+}
+
+.isosurface{
+	margin: 0;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.material{
+	margin: 0;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.light{
+	margin: 0;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.lightcolorbar{
+	margin: 0;
+	margin-top: 40px;
+}
+
+#id_form2{
+	padding-left: 7px;
+}
+
+.name {
+	bottom: 10px;
+	font-size: 16px;
+	margin-top: 50px;
+}
+
+.display{
+	float: left;
+	margin: 0;
+	width:76.8%;
+}
