@@ -82,15 +82,15 @@ function main()
 
     var btn5 = document.getElementById('lightcolorbuttun');
     btn5.addEventListener('click', function(e){
-        check1 = document.form3.light1.checked;
-        if(check1==true){
+        check3 = document.form3.light1.checked;
+        if(check3==true){
             screen.scene.remove( directionalLight );
         }
-        obj = document.getElementById("id_textBox2");
-        color = obj.value.replace( /#/g , "0x" );
-        directionalLight = new THREE.DirectionalLight(color, 0.3);
+        obj2 = document.getElementById("id_textBox2");
+        color2 = obj2.value.replace( /#/g , "0x" );
+        directionalLight = new THREE.DirectionalLight(color2, 0.3);
         directionalLight.position.set(0, 0, 40);
-        if(check1==true){
+        if(check3==true){
             screen.scene.add( directionalLight );
         }
     });
